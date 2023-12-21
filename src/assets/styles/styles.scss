@@ -1,0 +1,280 @@
+/* Estilos Globales */
+@import "variables";
+
+
+* {
+  font-family: $font-family-main;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $bg-color;
+}
+
+
+/******************
+    ENCABEZADOS
+*******************/
+h1, h2, h3 {
+  text-align: center;
+  padding: 2rem; 
+  font-family: $font-family-header;
+}
+
+h1 {
+  font-size: 4rem; 
+}
+
+h2 {
+  font-size: 3rem; 
+}
+
+h3 {
+  font-size: 2rem; 
+}
+
+/******************
+MENÚ DE NAVEGACIÓN 
+*******************/
+.nav-main .container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 767px) {
+  .nav-menu {
+      display: inline-block; 
+      text-align: center; 
+      }
+}
+
+.nav-menu .nav-item,
+.nav-menu .nav-item-active {
+  font-weight: 600;
+  flex: 1;
+  text-align: center;
+}
+
+.nav-menu .nav-link-active {
+  color: $contrast-color;
+}
+
+.nav-menu .nav-link {
+  color: $text-color;
+  line-height: 1em;
+}
+
+.nav-menu .nav-link:hover,
+.nav-menu .nav-link-active:hover {
+  background-color: $text-color;
+  border-radius: 5px;
+}
+
+.navbar {
+  background-color: $main-color; 
+}
+
+.navbar-brand,
+.nav-link {
+  color: $text-color;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+  color: $light-color; 
+  background-color: $contrast-color; 
+  border-radius: 5px;  
+}
+/*****************
+    GALERÍA 
+******************/
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.player {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  margin: 2rem;
+  border-radius: 15%;
+}
+
+.player img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15%;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+figcaption h3,
+figcaption p {
+  margin: 0;
+}
+
+figcaption h3 {
+  font-size: 1.2rem;
+}
+
+figcaption p {
+  font-size: 1rem;
+}
+
+
+/******************
+     ARTÍCULO 
+*******************/
+.article {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: $light-color;
+  border-radius: 10px;
+
+  h1 {
+    text-align: center;
+    color: $text-color;
+    font-family: $font-family-header;
+  }
+
+  p, blockquote, ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $text-color;
+    font-family: $font-family-main;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 15%;
+    object-fit: cover;
+  }
+
+  blockquote {
+    background-color: $light-color;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid $main-color;
+    font-family: $font-family-accent;
+    font-style: italic;
+
+    cite {
+      display: block;
+      margin-top: 0.5rem;
+      color: $contrast-color;
+      font-style: italic;
+    }
+  }
+
+  ul {
+    list-style-type: square;
+    margin-left: 2rem;
+  }
+
+  &:has(ul) {
+    border-top: 2px solid $main-color;
+  }
+
+  &:is(h1, img) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 767px) {
+  
+  .article {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .article img {
+    flex: 0 0 48%; 
+    margin-right: 2%;
+    border-radius: 15%;
+  }
+
+  .article div {
+    flex: 0 0 48%;  
+  }
+}
+
+
+
+/* Estilos de la Tabla de Horarios */
+.schedule {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black;
+
+  td {
+    padding: 1rem;
+    border: 1px solid black;
+    text-align: center;
+
+    &.holiday {
+      background-color: $color-holiday;
+    }
+
+    &.league {
+      background-color: $color-league;
+    }
+
+    &.training {
+      background-color: $color-training;
+    }
+
+    &.free {
+      background-color: $color-free;
+    }
+
+    &.next_month {
+      color: $color-next-month;
+    }
+  }
+
+  @media (max-width: 767px) and (orientation: portrait) {
+    .schedule {
+      display: block;
+    }
+   thead tr {
+      display: none;
+    }
+  
+
+    td {
+      display: block; 
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 1rem; 
+  
+    }
+}
+}

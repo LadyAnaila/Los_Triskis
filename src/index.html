@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/styles.css"><!-- do not remove this line! -->
+  <link rel="icon" type="image/png" href="./assets/images/icon.png" sizes="16x16 32x32">
+  <title>CLub de Tenis los Triskis</title>
+
+  
+</head>
+
+<body>
+
+  <nav>
+    <include src="./views/nav.html"></include>
+  </nav>
+  
+  <div class="grid-container">
+    <picture>
+      <source srcset="./assets/images/logo.png?as=webp&width=100" type="image/webp" />
+      <img src="./assets/images/logo.png?width=100" alt="Raquetas" class="uoc-logo" />
+    </picture>
+
+    <picture>
+      <source srcset="./assets/images/bg_img.jpg?as=webp&width=1000" type="image/webp" />
+      <img src="./assets/images/bg_img.jpg?width=1000" alt="Pelotas" class="main-bg" />
+    </picture>
+
+    <h1 class="title">Club de Tenis Los Triskis</h1>
+    <p class="introduction">
+      ¡Bienvenidos a "Los Triskis"! 🎾 Somos más que un club de tenis, somos una familia de amigos apasionados por la raqueta y la diversión. 🌟 En "Los Triskis", no solo nos reunimos para jugar al tenis, sino también para compartir risas, alegrías y momentos inolvidables en la cancha. 💪 Nuestro lema: "¡Raquetas en alto, corazones en juego!"
+    </p>
+  </div>
+
+  <a href="members.html">miembros</a>
+
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
+</html>
